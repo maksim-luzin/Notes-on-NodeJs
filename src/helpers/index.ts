@@ -1,4 +1,4 @@
 import { getPort } from './getPort';
-import { nameOrContentIsNotString } from './nameOrContentIsNotString';
+import { nameContentFieldsIsNotString } from './nameContentFieldsIsNotString';
 
-export { getPort, nameOrContentIsNotString };
+export { getPort, nameContentFieldsIsNotString };

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import { HttpStatus } from '../../common/const/HttpStatus';
-import { IError } from '../../common/interfaces';
+import { HttpStatus } from '../common/const/HttpStatus';
+import { IError } from '../common/interfaces';
 
 const errorHandlerMiddleware = (
   err: IError,

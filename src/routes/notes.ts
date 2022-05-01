@@ -1,9 +1,12 @@
 import { Router, Request, Response, NextFunction } from 'express';
-import { createMiddleware, updateMiddleware } from '../middlewares';
+import {
+  noteCreationDataValidationMiddleware,
+  noteUpdateDataValidationMiddleware,
+} from '../middlewares';
 import { noteServices } from '../services';
-import { Routes } from '../../common/enums';
-import { NotFoundError, InternalServerError } from '../../errors';
-import { INoteCreate } from '../../common/interfaces';
+import { Routes } from '../common/enums';
+import { NotFoundError, InternalServerError } from '../errors';
+import { INoteCreate } from '../common/interfaces';
 
 const notes: Router = Router();
 
@@ -28,7 +31,7 @@ notes
   )
   .post(
     Routes.All,
-    createMiddleware,
+    noteCreationDataValidationMiddleware,
     ({ body }: Request, res: Response, next: NextFunction) =>
       noteServices
         .create(body as INoteCreate)
@@ -37,7 +40,7 @@ notes
   )
   .put(
     Routes.Id,
-    updateMiddleware,
+    noteUpdateDataValidationMiddleware,
     (req: Request, res: Response, next: NextFunction) =>
       noteServices
         .update(req)

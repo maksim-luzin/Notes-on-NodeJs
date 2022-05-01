@@ -2,8 +2,8 @@ import { createServer } from 'http';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { routes } from './api/routes';
-import { errorHandlerMiddleware } from './api/middlewares/errorHandlerMiddleware';
+import { routes } from './routes';
+import { errorHandlerMiddleware } from './middlewares/errorHandlerMiddleware';
 import { getPort } from './helpers';
 
 const app = express();

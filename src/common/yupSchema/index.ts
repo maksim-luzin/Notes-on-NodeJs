@@ -1,4 +1,7 @@
-import { schemaForCreateMiddleware } from './schemaForCreateMiddleware';
-import { schemaForUpdateMiddleware } from './schemaForUpdateMiddleware';
+import { schemaForNoteCreationDataValidation } from './schemaForNoteCreationDataValidation';
+import { schemaForNoteUpdateDataValidation } from './schemaForNoteUpdateDataValidation';
 
-export { schemaForCreateMiddleware, schemaForUpdateMiddleware };
+export {
+  schemaForNoteCreationDataValidation,
+  schemaForNoteUpdateDataValidation,
+};

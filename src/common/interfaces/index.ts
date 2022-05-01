@@ -1,4 +1,9 @@
-import { INote, INoteCreate, INoteUpdate, INameOrContent } from './notes';
+import {
+  INote,
+  INoteCreate,
+  INoteUpdate,
+  INameContentFieldsValidation,
+} from './notes';
 import { ISuccess, IError, IStats } from './common';
 
 export type {
@@ -8,5 +13,5 @@ export type {
   IError,
   IStats,
   INoteUpdate,
-  INameOrContent,
+  INameContentFieldsValidation,
 };

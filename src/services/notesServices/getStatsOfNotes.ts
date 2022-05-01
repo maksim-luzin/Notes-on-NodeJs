@@ -1,6 +1,6 @@
-import { notesRepository } from '../../../data/repositories';
-import { Status } from '../../../common/enums/status';
-import { IStats } from '../../../common/interfaces';
+import { notesRepository } from '../../data/repositories';
+import { Status } from '../../common/enums/status';
+import { IStats } from '../../common/interfaces';
 
 const getStatsOfNotes = async () => {
   const notes = await notesRepository.getAll();
